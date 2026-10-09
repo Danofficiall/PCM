@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+}
+
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input.is-invalid, select.is-invalid {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.btn-primary { background: #2563eb; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
+.btn-secondary { background: #475569; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
+.btn-dev { background: #d97706; color: white; border: none; padding: 5px 10px; border-radius: 4px; }
+.btn-upload { background: #059669; color: white; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 14px; }
