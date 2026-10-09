@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FleetOps PCM</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo-container">
+      <img id="site-logo" src="https://via.placeholder.com/150x50" alt="Logo FleetOps">
+      <label id="admin-logo-upload-btn" class="btn-upload">
+        Alterar Logo
+        <input type="file" id="logo-input" accept="image/*" style="display:none;">
+      </label>
+    </div>
+
+    <button id="dev-customize-header" class="btn-dev">Personalizar Cabeçalho (Dev)</button>
+  </header>
+
+  <main>
+    <!-- MÓDULO DE REGISTRO PCM -->
+    <section class="card">
+      <h2>Novo Registro Operacional</h2>
+      <form id="pcm-form">
+        
+        <div class="form-group">
+          <label>País da Placa *</label>
+          <select id="plate_country" required>
+            <option value="BR_MERCOSUL">Brasil (Mercosul)</option>
+            <option value="BR_OLD">Brasil (Formato Antigo)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Placa do Veículo *</label>
+          <input type="text" id="vehicle_plate" data-type="plate" placeholder="AAA1B23" required>
+        </div>
+
+        <div class="form-group">
+          <label>Locador *</label>
+          <select id="lessor_select" required></select>
+        </div>
+
+        <div class="form-group">
+          <label>Fornecedor *</label>
+          <select id="supplier_select" required></select>
+        </div>
+
+        <div class="form-group">
+          <label>CPF do Condutor *</label>
+          <input type="text" data-mask="cpf" placeholder="000.000.000-00" required>
+        </div>
+
+        <div class="form-group">
+          <label>Observações (Opcional)</label>
+          <textarea id="notes" name="notes" placeholder="Digite informações complementares se necessário..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Salvar Registro</button>
+      </form>
+    </section>
+
+    <!-- ABA DE GESTÃO DE USUÁRIOS E ACESSOS -->
+    <section class="card">
+      <h2>Usuários e Níveis de Acesso</h2>
+      <form id="user-management-form">
+        <input type="text" placeholder="Nome Completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <select required>
+          <option value="">Selecione o Nível de Acesso...</option>
+          <option value="admin">Administrador</option>
+          <option value="operator">Operador</option>
+          <option value="viewer">Visualizador</option>
+        </select>
+        <button type="submit" class="btn-secondary">Cadastrar Usuário</button>
+      </form>
+    </section>
+
+    <!-- ABA DE GESTÃO DE LOCADORES E FORNECEDORES -->
+    <section class="card">
+      <h2>Cadastro de Locadores e Fornecedores</h2>
+      <form id="partner-form">
+        <input type="text" placeholder="Razão Social / Nome" required>
+        <select required>
+          <option value="lessor">Locador</option>
+          <option value="supplier">Fornecedor</option>
+          <option value="both">Ambos</option>
+        </select>
+        <input type="text" data-mask="cpf" placeholder="CPF ou CNPJ" required>
+        <button type="submit" class="btn-secondary">Cadastrar Parceiro</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 FleetOps PCM. Todos os direitos reservados.</p>
+    <button id="dev-customize-footer" class="btn-dev">Personalizar Rodapé (Dev)</button>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
